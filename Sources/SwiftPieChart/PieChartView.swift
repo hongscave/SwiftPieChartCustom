@@ -86,7 +86,7 @@ public struct PieChartView: View {
                     )
                     Circle()
                         .fill(self.backgroundColor)
-                        .frame(width: widthFraction * geometry.size.width * innerRadiuFraction, height: wsidthFraction * geometry.size.width * innerRadiusFraction)
+                        .frame(width: widthFraction * geometry.size.width * innerRadiusFraction, height: widthFraction * geometry.size.width * innerRadiusFraction)
                     
                     VStack {
                         Text(self.activeIndex == -1 ? "Total" : names[self.activeIndex])
