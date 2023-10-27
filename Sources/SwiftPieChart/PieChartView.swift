@@ -86,7 +86,7 @@ public struct PieChartView: View {
                     )
                     Circle()
                         .fill(self.backgroundColor)
-                        .frame(width: widthFraction * geometry.size.width * innerRadiusFraction, height: widthFraction * geometry.size.width * innerRadiusFraction)
+                        .frame(width: widthFraction * geometry.size.width * innerRadiuFraction, height: wsidthFraction * geometry.size.width * innerRadiusFraction)
                     
                     VStack {
                         Text(self.activeIndex == -1 ? "Total" : names[self.activeIndex])
@@ -100,7 +100,7 @@ public struct PieChartView: View {
                 PieChartRows(colors: self.colors, names: self.names, values: self.values.map { self.formatter($0) }, percents: self.values.map { String(format: "%.0f%%", $0 * 100 / self.values.reduce(0, +)) }, textColor: textColor)
             }
             .background(self.backgroundColor)
-            .foregroundColor(textColor)
+            .foregroundColor(self.textColor)
         }
     }
 }
@@ -129,7 +129,7 @@ struct PieChartRows: View {
                             
                     }
                 }
-                   .foregroundColor(textColor)
+                   .foregroundColor(self.textColor)
             }
         }
     }
