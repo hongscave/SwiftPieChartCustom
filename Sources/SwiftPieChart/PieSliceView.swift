@@ -38,7 +38,7 @@ struct PieSlice: View {
                         x: geometry.size.width * 0.5 * CGFloat(1.0 + 0.78 * cos(self.midRadians)),
                         y: geometry.size.height * 0.5 * CGFloat(1.0 - 0.78 * sin(self.midRadians))
                     )
-                    .foregroundColor(Color.white)
+                    .foregroundColor(pieSliceData.textColor)
             }
         }
         .aspectRatio(1, contentMode: .fit)
@@ -51,11 +51,7 @@ struct PieSliceData {
     var endAngle: Angle
     var text: String
     var color: Color
+    var textColor: Color
 }
 
-@available(OSX 10.15.0, *)
-struct PieSlice_Previews: PreviewProvider {
-    static var previews: some View {
-        PieSlice(pieSliceData: PieSliceData(startAngle: Angle(degrees: 0.0), endAngle: Angle(degrees: 120.0), text: "30%", color: Color.black))
-    }
-}
+
