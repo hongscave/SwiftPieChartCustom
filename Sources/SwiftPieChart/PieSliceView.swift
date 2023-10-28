@@ -39,7 +39,7 @@ struct PieSlice: View {
                         y: geometry.size.height * 0.5 * CGFloat(1.0 - 0.78 * sin(self.midRadians))
                     )
                     .foregroundColor(pieSliceData.textColor)
-                    .opacity(0.7)
+                   
             }
         }
         .aspectRatio(1, contentMode: .fit)
