@@ -90,10 +90,10 @@ public struct PieChartView: View {
                     
                     VStack {
                         Text(self.activeIndex == -1 ? "Total" : names[self.activeIndex])
-                            .font(.title)
-                           .opacity(0.7)
+                            .font(.body)
+                           .opacity(0.6)
                         Text(self.formatter(self.activeIndex == -1 ? values.reduce(0, +) : values[self.activeIndex]))
-                            .font(.title)
+                            .font(.body)
                     }
                     
                 }
@@ -126,7 +126,7 @@ struct PieChartRows: View {
                         Text(self.values[i])
                         
                         Text(self.percents[i])
-                            .opacity(0.7)
+                            .opacity(0.6)
                     }
                 }
                    .foregroundColor(self.textColor)
